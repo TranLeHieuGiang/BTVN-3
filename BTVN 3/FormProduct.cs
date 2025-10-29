@@ -41,45 +41,33 @@ namespace Ministore
         public FormProduct()
         {
             InitializeComponent();
-            // đảm bảo ctxListView không null
+            // Nếu ctxListView chưa được Designer khởi tạo (null) thì dừng
             if (ctxListView == null)
+                return;
+
+            // Lấy 2 ToolStripMenuItem đã tạo trong Designer (nếu Designer đổi tên thì sửa lại tên tương ứng)
+            var xemItem = ctxListView.Items.OfType<ToolStripItem>()
+                .FirstOrDefault(i => string.Equals(i.Name, "xemChiTietToolStripMenuItem", StringComparison.OrdinalIgnoreCase)
+                                  || string.Equals(i.Text?.Trim(), "Xem chi tiết", StringComparison.OrdinalIgnoreCase));
+
+            var xoaItem = ctxListView.Items.OfType<ToolStripItem>()
+                .FirstOrDefault(i => string.Equals(i.Name, "xoáSảnPhẩmToolStripMenuItem", StringComparison.OrdinalIgnoreCase)
+                                  || string.Equals(i.Name, "xoaSanPhamToolStripMenuItem", StringComparison.OrdinalIgnoreCase) // in case no accent
+                                  || string.Equals(i.Text?.Trim(), "Xóa sản phẩm", StringComparison.OrdinalIgnoreCase)
+                                  || string.Equals(i.Text?.Trim(), "Xoá sản phẩm", StringComparison.OrdinalIgnoreCase));
+
+            // Gỡ handler trước rồi gán lại (đảm bảo không gán 2 lần)
+            if (xemItem != null)
             {
-                MessageBox.Show("ctxListView chưa được tạo.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // tìm item theo Name hoặc Text (bảo vệ trường hợp name khác hoặc có dấu)
-                var xemItem = ctxListView.Items
-                    .OfType<ToolStripItem>()
-                    .FirstOrDefault(i => string.Equals(i.Name, "xemChiTietToolStripMenuItem", StringComparison.OrdinalIgnoreCase)
-                                      || string.Equals(i.Text, "Xem chi tiết", StringComparison.OrdinalIgnoreCase));
-
-                var xoaItem = ctxListView.Items
-                    .OfType<ToolStripItem>()
-                    .FirstOrDefault(i => string.Equals(i.Name, "xoaSanPhamToolStripMenuItem", StringComparison.OrdinalIgnoreCase)
-                                      || string.Equals(i.Text, "Xóa sản phẩm", StringComparison.OrdinalIgnoreCase)
-                                      || string.Equals(i.Text, "Xóa sản phẩm", StringComparison.Ordinal)); // thêm option
-
-                // nếu không có thì tạo mới và add vào ctxListView
-                if (xemItem == null)
-                {
-                    xemItem = new ToolStripMenuItem("Xem chi tiết") { Name = "xemChiTietToolStripMenuItem" };
-                    ctxListView.Items.Add(xemItem);
-                }
-                if (xoaItem == null)
-                {
-                    xoaItem = new ToolStripMenuItem("Xóa sản phẩm") { Name = "xoaSanPhamToolStripMenuItem" };
-                    ctxListView.Items.Add(xoaItem);
-                }
-
-                // gỡ trước rồi đăng lại để tránh gán trùng
                 xemItem.Click -= xemChiTiếtToolStripMenuItem_Click;
                 xemItem.Click += xemChiTiếtToolStripMenuItem_Click;
+            }
 
+            if (xoaItem != null)
+            {
                 xoaItem.Click -= xoáSảnPhẩmToolStripMenuItem_Click;
                 xoaItem.Click += xoáSảnPhẩmToolStripMenuItem_Click;
             }
-
         }
 
         private void Form3_Load(object sender, EventArgs e)
