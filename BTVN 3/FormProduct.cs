@@ -56,6 +56,8 @@ namespace Ministore
                                   || string.Equals(i.Text?.Trim(), "Xóa sản phẩm", StringComparison.OrdinalIgnoreCase)
                                   || string.Equals(i.Text?.Trim(), "Xoá sản phẩm", StringComparison.OrdinalIgnoreCase));
 
+            
+
             // Gỡ handler trước rồi gán lại (đảm bảo không gán 2 lần)
             if (xemItem != null)
             {
@@ -68,6 +70,7 @@ namespace Ministore
                 xoaItem.Click -= xoáSảnPhẩmToolStripMenuItem_Click;
                 xoaItem.Click += xoáSảnPhẩmToolStripMenuItem_Click;
             }
+
         }
 
         private void Form3_Load(object sender, EventArgs e)
