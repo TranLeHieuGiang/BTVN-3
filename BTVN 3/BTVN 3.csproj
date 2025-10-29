@@ -125,5 +125,35 @@
   <ItemGroup>
     <None Include="Resources\a7554163caa16bc814ed7c9a004ded55.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-in-trendy-flat-style-isolated-on-white-background-approach-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-flat-style-for-graphic-design-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-icon-template-black-color-editable-log-out-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-exit-icon-miscellaneous-angle-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-salesmen-transparent-icon-user-avatar-symbol-professional-people-and-character-vector-png-image_11753722.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-invoice-vector-icon-design-illustration-png-image_6636703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-packaging-branding-marketing-product-bottle-glyph-icon--vect-png-image_3731027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bieu-tuong-contact-pho-bien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-business-presentation-icon-in-trendy-style-isolated-background-png-image_4829467.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

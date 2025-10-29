@@ -54,11 +54,14 @@ namespace MiniStore
             giớiThiệuToolStripMenuItem.Click += (s, ev) => MessageBox.Show("Ứng dụng quản lý Mini Store.\nPhiên bản 1.0");
             liênHệToolStripMenuItem.Click += (s, ev) => MessageBox.Show("Liên hệ: support@ministore.vn");
             sảnPhẩmToolStripMenuItem.Click += (s, ev) => OpenFormProduct();
+            
+
             // Gán sự kiện cho ToolStrip
             tsbLogin.Click += (s, ev) => đăngNhậpToolStripMenuItem.PerformClick();
             tsbLogout.Click += (s, ev) => đăngXuấtToolStripMenuItem.PerformClick();
             tsbExit.Click += (s, ev) => Close();
-
+            tsbProduct.Click += (s, ev) => sảnPhẩmToolStripMenuItem.PerformClick();
+            
             //Gán logo
             pictureBox1.Image = BTVN_3.Properties.Resources.logo;
 

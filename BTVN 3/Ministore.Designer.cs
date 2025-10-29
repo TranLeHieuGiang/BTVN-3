@@ -31,6 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ministore));
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
+            this.tsbLogin = new System.Windows.Forms.ToolStripButton();
+            this.tsbLogout = new System.Windows.Forms.ToolStripButton();
+            this.tsbExit = new System.Windows.Forms.ToolStripButton();
+            this.tsbEmployee = new System.Windows.Forms.ToolStripButton();
+            this.tsbProduct = new System.Windows.Forms.ToolStripButton();
+            this.tsbBill = new System.Windows.Forms.ToolStripButton();
+            this.tsbGioithieu = new System.Windows.Forms.ToolStripButton();
+            this.tsbLienhe = new System.Windows.Forms.ToolStripButton();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +69,6 @@
             this.tsslForm = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tsbLogin = new System.Windows.Forms.ToolStripButton();
-            this.tsbLogout = new System.Windows.Forms.ToolStripButton();
-            this.tsbExit = new System.Windows.Forms.ToolStripButton();
             this.toolStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -76,12 +81,92 @@
             this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbLogin,
             this.tsbLogout,
-            this.tsbExit});
+            this.tsbExit,
+            this.tsbEmployee,
+            this.tsbProduct,
+            this.tsbBill,
+            this.tsbGioithieu,
+            this.tsbLienhe});
             this.toolStripMain.Location = new System.Drawing.Point(0, 24);
             this.toolStripMain.Name = "toolStripMain";
             this.toolStripMain.Size = new System.Drawing.Size(800, 25);
             this.toolStripMain.TabIndex = 3;
             this.toolStripMain.Text = "toolStrip1";
+            // 
+            // tsbLogin
+            // 
+            this.tsbLogin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLogin.Image = global::BTVN_3.Properties.Resources.login;
+            this.tsbLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLogin.Name = "tsbLogin";
+            this.tsbLogin.Size = new System.Drawing.Size(23, 22);
+            this.tsbLogin.Text = "Đăng nhập";
+            // 
+            // tsbLogout
+            // 
+            this.tsbLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLogout.Image = ((System.Drawing.Image)(resources.GetObject("tsbLogout.Image")));
+            this.tsbLogout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLogout.Name = "tsbLogout";
+            this.tsbLogout.RightToLeftAutoMirrorImage = true;
+            this.tsbLogout.Size = new System.Drawing.Size(23, 22);
+            this.tsbLogout.Text = "Đăng xuất";
+            // 
+            // tsbExit
+            // 
+            this.tsbExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExit.Image = global::BTVN_3.Properties.Resources.exit;
+            this.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExit.Name = "tsbExit";
+            this.tsbExit.Size = new System.Drawing.Size(23, 22);
+            this.tsbExit.Text = "Thoát";
+            // 
+            // tsbEmployee
+            // 
+            this.tsbEmployee.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEmployee.Image = global::BTVN_3.Properties.Resources.nhân_viên;
+            this.tsbEmployee.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEmployee.Name = "tsbEmployee";
+            this.tsbEmployee.Size = new System.Drawing.Size(23, 22);
+            this.tsbEmployee.Text = "Nhân viên";
+            this.tsbEmployee.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
+            // 
+            // tsbProduct
+            // 
+            this.tsbProduct.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbProduct.Image = global::BTVN_3.Properties.Resources.sp;
+            this.tsbProduct.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbProduct.Name = "tsbProduct";
+            this.tsbProduct.Size = new System.Drawing.Size(23, 22);
+            this.tsbProduct.Text = "Sản phẩm";
+            // 
+            // tsbBill
+            // 
+            this.tsbBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBill.Image = global::BTVN_3.Properties.Resources.hóa_đơn;
+            this.tsbBill.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBill.Name = "tsbBill";
+            this.tsbBill.Size = new System.Drawing.Size(23, 22);
+            this.tsbBill.Text = "Hóa đơn";
+            this.tsbBill.Click += new System.EventHandler(this.hoáĐơnToolStripMenuItem_Click);
+            // 
+            // tsbGioithieu
+            // 
+            this.tsbGioithieu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbGioithieu.Image = global::BTVN_3.Properties.Resources.giới_thiệu;
+            this.tsbGioithieu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGioithieu.Name = "tsbGioithieu";
+            this.tsbGioithieu.Size = new System.Drawing.Size(23, 22);
+            this.tsbGioithieu.Text = "Giới thiệu";
+            // 
+            // tsbLienhe
+            // 
+            this.tsbLienhe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLienhe.Image = global::BTVN_3.Properties.Resources.liên_hệ;
+            this.tsbLienhe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLienhe.Name = "tsbLienhe";
+            this.tsbLienhe.Size = new System.Drawing.Size(23, 22);
+            this.tsbLienhe.Text = "Liên hệ";
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -128,7 +213,7 @@
             this.xoáToolStripMenuItem2,
             this.sửaToolStripMenuItem});
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
@@ -157,7 +242,7 @@
             this.cậpNhậtToolStripMenuItem1,
             this.xoáToolStripMenuItem1});
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản phẩm";
             this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmToolStripMenuItem_Click);
             // 
@@ -186,7 +271,7 @@
             this.inToolStripMenuItem,
             this.lưuToolStripMenuItem});
             this.hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
-            this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
             this.hoáĐơnToolStripMenuItem.Click += new System.EventHandler(this.hoáĐơnToolStripMenuItem_Click);
             // 
@@ -307,33 +392,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // tsbLogin
-            // 
-            this.tsbLogin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbLogin.Image = ((System.Drawing.Image)(resources.GetObject("tsbLogin.Image")));
-            this.tsbLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbLogin.Name = "tsbLogin";
-            this.tsbLogin.Size = new System.Drawing.Size(23, 22);
-            this.tsbLogin.Text = "Đăng nhập";
-            // 
-            // tsbLogout
-            // 
-            this.tsbLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbLogout.Image = ((System.Drawing.Image)(resources.GetObject("tsbLogout.Image")));
-            this.tsbLogout.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbLogout.Name = "tsbLogout";
-            this.tsbLogout.Size = new System.Drawing.Size(23, 22);
-            this.tsbLogout.Text = "Đăng xuất";
-            // 
-            // tsbExit
-            // 
-            this.tsbExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbExit.Image = ((System.Drawing.Image)(resources.GetObject("tsbExit.Image")));
-            this.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbExit.Name = "tsbExit";
-            this.tsbExit.Size = new System.Drawing.Size(23, 22);
-            this.tsbExit.Text = "Thoát";
-            // 
             // Ministore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,6 +455,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem xoáToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbEmployee;
+        private System.Windows.Forms.ToolStripButton tsbProduct;
+        private System.Windows.Forms.ToolStripButton tsbBill;
+        private System.Windows.Forms.ToolStripButton tsbGioithieu;
+        private System.Windows.Forms.ToolStripButton tsbLienhe;
     }
 }
 

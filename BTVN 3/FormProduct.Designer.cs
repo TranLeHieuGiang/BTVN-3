@@ -119,7 +119,6 @@
             this.tvCategories.Name = "tvCategories";
             this.tvCategories.Size = new System.Drawing.Size(266, 450);
             this.tvCategories.TabIndex = 0;
-            
             // 
             // lvProducts
             // 
@@ -130,13 +129,13 @@
             this.columnHeader3,
             this.columnHeader4});
             this.lvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvProducts.FullRowSelect = true;
             this.lvProducts.HideSelection = false;
             this.lvProducts.Location = new System.Drawing.Point(0, 0);
             this.lvProducts.Name = "lvProducts";
             this.lvProducts.Size = new System.Drawing.Size(530, 450);
             this.lvProducts.TabIndex = 0;
             this.lvProducts.UseCompatibleStateImageBehavior = false;
-            
             // 
             // columnHeader1
             // 
